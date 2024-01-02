@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "my-blocks/collapsible",
+  "version": "0.1.0",
+  "title": "Collapsible Content",
+  "category": "widgets",
+  "icon": "admin-collapse",
+  "description": "Allow to expand/collapse content.",
+  "example": {
+    "attributes": {
+      "title": "My title",
+      "isOpen": false
+    }
+  },
+  "supports": {
+    "html": false,
+    "spacing": {
+      "margin": [
+        "top",
+        "bottom"
+      ]
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "isOpen": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "textdomain": "my-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}
