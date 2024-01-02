@@ -25,6 +25,20 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
 function my_blocks_my_blocks_block_init() {
+	add_filter(
+		'block_categories_all',
+		function( $categories ) {
+			array_unshift(
+				$categories,
+				array(
+					'title' => 'My Blocks',
+					'slug'  => 'my-blocks',
+				)
+			);
+			return $categories;
+		}
+	);
+
 	register_block_type( __DIR__ . '/build/blocks/collapsible-content' );
 }
 add_action( 'init', 'my_blocks_my_blocks_block_init' );

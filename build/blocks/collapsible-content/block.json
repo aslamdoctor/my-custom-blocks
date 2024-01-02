@@ -4,7 +4,7 @@
   "name": "my-blocks/collapsible",
   "version": "0.1.0",
   "title": "Collapsible Content",
-  "category": "widgets",
+  "category": "my-blocks",
   "icon": "admin-collapse",
   "description": "Allow to expand/collapse content.",
   "example": {

@@ -1,5 +1,4 @@
 import { __ } from "@wordpress/i18n";
-import metadata from "./block.json";
 
 import { useBlockProps, RichText, InnerBlocks } from "@wordpress/block-editor";
 import { getBlockTypes } from "@wordpress/blocks";
@@ -36,10 +35,7 @@ export default function Edit(props) {
 
 	const ALLOWED_BLOCKS = getBlockTypes()
 		.map((block) => block.name)
-		.filter(
-			(blockName) =>
-				[metadata.name, "blockylicious/curvy"].indexOf(blockName) === -1,
-		);
+		.filter((blockName) => [props.name].indexOf(blockName) === -1);
 
 	return (
 		<div {...blockProps}>
